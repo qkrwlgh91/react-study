@@ -4,23 +4,41 @@ import './ExpenseForm.css';
 
 const ExpenseForm = () => {
     // document.getElementById('').addEventListener('click', (event) => {})
-    const [enteredTitle, setEnteredTitle] = useState('');
-    const [enteredAmount, setEnteredAmount] = useState('');
-    const [enteredDate, setEnteredDate] = useState('');
+    
+    // const [enteredTitle, setEnteredTitle] = useState('');
+    // const [enteredAmount, setEnteredAmount] = useState('');
+    // const [enteredDate, setEnteredDate] = useState('');
+    const [userInput, setUserInput] = useState({
+        enteredTitle: '',
+        enteredAmount: '',
+        enteredDate: ''
+    });
 
     const titleChangeHandler = (event) => {
-        setEnteredTitle(event.target.value);
-        console.log(enteredTitle);
+        // setEnteredTitle(event.target.value);
+        // console.log(enteredTitle);
+        setUserInput({
+            ...userInput,
+            enteredTitle: event.target.value
+        })
     };
 
     const amountChangeHandler = (event) => {
-        setEnteredAmount(event.target.value);
-        console.log(enteredAmount);
+        // setEnteredAmount(event.target.value);
+        // console.log(enteredAmount);
+        setUserInput({
+            ...userInput,
+            enteredAmount: event.target.value
+        })
     };
 
     const dateChangeHandler = (event) => {
-        setEnteredDate(event.target.value);
-        console.log(enteredDate);
+        // setEnteredDate(event.target.value);
+        // console.log(enteredDate);
+        setUserInput({
+            ...userInput,
+            enteredDate: event.target.value
+        })
     };
 
     return (
