@@ -15,8 +15,8 @@ const ExpenseForm = () => {
     // });
 
     const titleChangeHandler = (event) => {
-        // setEnteredTitle(event.target.value);
-        // console.log(enteredTitle);
+        setEnteredTitle(event.target.value);
+        console.log(enteredTitle);
         // setUserInput({
         //     ...userInput,
         //     enteredTitle: event.target.value
@@ -57,6 +57,7 @@ const ExpenseForm = () => {
         };
 
         console.log(expenseData);
+        // setEnteredTitle('');
     };
 
     return (
@@ -64,7 +65,10 @@ const ExpenseForm = () => {
             <div className='new-expense__controls'>
                 <div className='new-expense__control'>
                     <label>Title</label>
-                    <input type='text' onChange={titleChangeHandler} />
+                    <input 
+                        type='text'
+                        onChange={titleChangeHandler} 
+                    />
                 </div>
                 <div className='new-expense__control'>
                     <label>Amount</label>
